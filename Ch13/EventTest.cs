@@ -2,7 +2,6 @@ using System;
 
 delegate void EventHandler(string message);
 
-
 class MyNotifier
 {
     public event EventHandler SomethingHappened;
@@ -15,13 +14,11 @@ class MyNotifier
             SomethingHappened(String.Format("{0} : 369", number));
 
         }
-
     }
-
-   
-
-
 }
+
+
+
 
 class MainApp
 {
@@ -36,19 +33,11 @@ class MainApp
         MyNotifier notifier = new MyNotifier();
         notifier.SomethingHappened += new EventHandler(MyHandler);
 
-
         for (int i = 0; i < 30; i++)
-        {
             notifier.DoSomething(i);
 
-
-        }
-
-
-
+            
     }
-
-
 }
 
 
