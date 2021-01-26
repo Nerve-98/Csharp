@@ -18,7 +18,7 @@ class SideTask
             while(count > 0)
             {
                 Console.WriteLine($"{count--} left");
-                Thread.Sleep(10);
+                Thread.Sleep(100);
                
 
             }
@@ -51,7 +51,9 @@ class MainApp
 
 
         t1.Start();
-        Thread.Sleep(1000);
+        Thread.Sleep(10000);
+        
+        
         Console.WriteLine("Aborting thread...");
         t1.Abort();
 
